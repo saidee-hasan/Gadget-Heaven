@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard";
 import ProductCart from "../components/ProductCart";
+import CardDetails from "../pages/CardDetails";
 
 const routes = createBrowserRouter([
   {
@@ -19,15 +20,24 @@ const routes = createBrowserRouter([
 
         children: [
           {
-            path: "/category/:category", // This is the correct way to define the child route
-
+            path: "/", // This is the correct way to define the child route
             element: <ProductCart />,
+            loader:()=> fetch("../data.json")
+          },
+          {
+            path: "/category/:category", // This is the correct way to define the child route
+            element: <ProductCart />,
+            loader:()=> fetch("../data.json")
           },
         ],
       },
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/card/:id",
+        element: <CardDetails />,
       },
     ],
   },
