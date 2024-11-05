@@ -1,8 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 
 function Navbar() {
+  const location = useLocation();
+
+
+  // Define colors based on the pathname
+
+  const getBackgroundColor = () => {
+
+    switch (location.pathname) {
+
+      case '/':
+
+        return 'bg-green-200  rounded-t-2xl';
+
+      case '/dashboard':
+
+        return 'bg-red-200';
+
+
+      default:
+
+        return 'bg-green-200';
+
+    }
+
+  };
   return (
-    <div className="bg-green-200 shadow-md">
+    <div className={`${getBackgroundColor()} shadow-md`}>
       <div className="container mx-auto px-4">
         <div className="navbar">
           <div className="navbar-start">

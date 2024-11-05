@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Laptops", "slug": "laptops" },
+    { "id": 2, "name": "Phones", "slug": "phones" },
+    { "id": 3, "name": "MacBooks", "slug": "macbooks" },
+    { "id": 4, "name": "Smart Watches", "slug": "smart-watches" },
+    { "id": 5, "name": "iPhones", "slug": "iphones" },
+    { "id": 6, "name": "Accessories", "slug": "accessories" }
+  ]
