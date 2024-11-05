@@ -1,4 +1,5 @@
 [
+    { "id": 1, "name": "All", "slug": "All" },
     { "id": 1, "name": "Laptops", "slug": "laptops" },
     { "id": 2, "name": "Phones", "slug": "phones" },
     { "id": 3, "name": "MacBooks", "slug": "macbooks" },
