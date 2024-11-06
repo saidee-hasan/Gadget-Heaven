@@ -4,7 +4,7 @@ function Banner() {
     <div className="relative">
       {/* Banner Image */}
       <img
-        className="absolute z-10 top-1/2 font-bold left-1/2 md:mt-56 mt-64 transform border-8 -translate-x-1/2 -translate-y-1/2 md:w-9/12    h-96 border-[15px] border-gray-100"
+        className="absolute z-10 top-1/2 font-bold left-1/2 md:mt-56 mt-64 transform border-8 -translate-x-1/2 -translate-y-1/2 md:w-9/12    h-96 border-[15px] border-purple-200"
         src={BgBanner}
         alt="Banner"
       />

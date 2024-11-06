@@ -1,183 +1,179 @@
 [
-
     {
 
         "id": 1,
-
+    
         "name": "iPhone 14 Pro",
-
+    
         "slug": "iphone-14-pro",
-
+    
         "description": "The iPhone 14 Pro features a stunning 6.1-inch display, A16 Bionic chip, and an advanced camera system.",
-
+    
         "price": 999.99,
-
-        "image": "https://example.com/images/iphone-14-pro.jpg",
-
+    
+        "image": "https://i.ibb.co.com/yPXtLYz/i-Phone-14-Blue-7810.jpg",
+    
         "category": "Phones"
-
+    
     },
-
+    
     {
-
+    
         "id": 2,
-
+    
         "name": "iPhone 14",
-
+    
         "slug": "iphone-14",
-
+    
         "description": "The iPhone 14 features a dual-camera system and a powerful A15 chip.",
-
+    
         "price": 799.99,
-
-        "image": "https://example.com/images/iphone-14.jpg",
-
+    
+        "image": "https://i.ibb.co.com/tbLVsHS/i-Phone-14-Starlight-8954.jpg",
+    
         "category": "Phones"
-
+    
     },
-
+    
     {
-
+    
         "id": 3,
-
+    
         "name": "Samsung Galaxy S21",
-
+    
         "slug": "samsung-galaxy-s21",
-
+    
         "description": "The Samsung Galaxy S21 features a vibrant display, powerful camera, and long-lasting battery.",
-
+    
         "price": 799.99,
-
-        "image": "https://example.com/images/samsung-galaxy-s21.jpg",
-
+    
+        "image": "https://i.ibb.co.com/Czg4NJ1/Galaxy-S23-Ultra-Sky-Blue-2618.jpg",
+    
         "category": "Phones"
-
+    
     },
-
+    
     {
-
+    
         "id": 4,
-
+    
         "name": "Google Pixel 6",
-
+    
         "slug": "google-pixel-6",
-
+    
         "description": "The Google Pixel 6 offers a unique design and an exceptional camera experience.",
-
+    
         "price": 599.99,
-
-        "image": "https://example.com/images/google-pixel-6.jpg",
-
+    
+        "image": "https://i.ibb.co.com/QjrftPd/Google-Pixel-7-price-in-bangladesh.jpg",
+    
         "category": "Phones"
-
+    
     },
-
+    
     {
-
+    
         "id": 5,
-
+    
         "name": "OnePlus 9",
-
+    
         "slug": "oneplus-9",
-
+    
         "description": "The OnePlus 9 combines fast performance with a stunning display and great camera capabilities.",
-
+    
         "price": 729.99,
-
-        "image": "https://example.com/images/oneplus-9.jpg",
-
+    
+        "image": "https://i.ibb.co.com/RC60d56/One-Plus-11-3-4957.jpg",
+    
         "category": "Phones"
-
+    
     },
-
+    
     {
-
+    
         "id": 6,
-
+    
         "name": "MacBook Pro 16",
-
+    
         "slug": "macbook-pro-16",
-
+    
         "description": "The MacBook Pro 16 offers powerful performance with the M1 Pro chip, perfect for professionals.",
-
+    
         "price": 2499.99,
-
-        "image": "https://example.com/images/macbook-pro-16.jpg",
-
+    
+        "image": "https://i.ibb.co.com/sFJptZ6/Apple-Mac-Book-Pro-M2-Pro-and-M2-Max-hero-230117-Full-Bleed-Image-jpg-large.jpg",
+    
         "category": "MacBooks"
-
+    
     },
-
+    
     {
-
+    
         "id": 7,
-
+    
         "name": "MacBook Air M1",
-
+    
         "slug": "macbook-air-m1",
-
+    
         "description": "The MacBook Air with M1 chip offers incredible performance and battery life in a lightweight design.",
-
+    
         "price": 999.99,
-
-        "image": "https://example.com/images/macbook-air-m1.jpg",
-
+    
+        "image": "https://i.ibb.co.com/m61b79K/Mac-Book-Air-M2-15-inch-8-CPU-10-GPU-Midnight-2449.jpg",
+    
         "category": "MacBooks"
-
+    
     },
-
+    
     {
-
+    
         "id": 8,
-
+    
         "name": "MacBook Pro 14",
-
+    
         "slug": "macbook-pro-14",
-
+    
         "description": "The MacBook Pro 14 combines portability with powerful performance for creative professionals.",
-
+    
         "price": 1999.99,
-
-        "image": "https://example.com/images/macbook-pro-14.jpg",
-
+    
+        "image": "https://i.ibb.co.com/hfNHssq/maxresdefault.jpg",
+    
         "category": "MacBooks"
-
+    
     },
-
+    
     {
-
+    
         "id": 9,
-
+    
         "name": "Dell XPS 13",
-
+    
         "slug": "dell-xps-13",
-
+    
         "description": "The Dell XPS 13 is a high-performance laptop with a sleek design and a stunning 4K display.",
-
+    
         "price": 1399.99,
-
-        "image": "https://example.com/images/dell-xps-13.jpg",
-
+    
+        "image": "https://i.ibb.co.com/GcX6dGc/unnamed.jpg",
+    
         "category": "Laptops"
-
+    
     },
-
+    
     {
-
+    
         "id": 10,
-
+    
         "name": "HP Spectre x360",
-
+    
         "slug": "hp-spectre-x360",
-
+    
         "description": "The HP Spectre x360 is a versatile laptop with a 2-in-1 design and impressive performance.",
-
+    
         "price": 1499.99,
-
-        "image": "https://example.com/images/hp-spectre-x360.jpg",
-
-        "category": "Laptops"
-
-    }
-
+    
+        "image": "https://i.ibb.co.com/gJTDfd9/g-Pvyaz76t-ASn87-RCGu-Sd-Dc-1200-80.jpg",
+    
+        "category": "Laptops"}
 ]

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { clearStoreRedList, getStoreRedList, removeFromStoreRedList } from '../utils/addToDb';
-
+import Delete from"../assets/delete_12319540.png"
 function Cart() {
 
 
@@ -89,13 +89,21 @@ const handleClear = () => {
                 <h1 className="text-xl font-semibold">{item.name}</h1>
                 <p className="text-gray-600">{item.description}</p>
                 <p className="text-lg font-bold text-green-600">${item.price.toFixed(2)}</p>
-                <button 
-                  onClick={() => handleRemove(item.id)} 
-                  className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors duration-300"
-                >
-                  Remove
-                </button>
+              
               </div>
+              <button 
+
+      onClick={() => handleRemove(item.id)} 
+
+      className="mt-2 flex items-center justify-center bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
+
+      aria-label={`Remove ${item.name}`} // Accessibility improvement
+
+    >
+
+      <img className="w-6 h-6" src={Delete} alt="Delete" /> {/* Adjusted size for better alignment */}
+
+    </button>
             </div>
           ))
         )}

@@ -16,7 +16,8 @@ export default function Card({ product }) {
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto bg-white m-4">
-      {image && <img className="w-full h-48 object-cover" src={image} alt={name} />}
+       <img className="w-full h-52 object-cover" src={image} alt={name} />
+  
       <div className="px-6 py-4">
         <h1 className="font-bold text-xl mb-2">{name}</h1>
         <p className="text-gray-700 text-base mb-2">{description}</p>
@@ -25,7 +26,7 @@ export default function Card({ product }) {
           onClick={handleViewMore} 
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
         >
-          View More
+     View Details
         </button>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import Chart from './Chart'
 
 function Statistics() {
-    
+    document.title="Statistics"
   return (
     <div className='mt-5'>
         <div className="text-center bg-purple-700 text-white p-5">

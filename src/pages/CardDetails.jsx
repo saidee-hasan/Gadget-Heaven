@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { addToFavoriteList, addToStoreRedList } from "../utils/addToDb";
-
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 function CardDetails() {
   const { id } = useParams();
@@ -19,9 +21,28 @@ function CardDetails() {
 
 
   const addToCart = (item) => {
+   
+handleToast("Product added")
     addToStoreRedList(item.id)
 
   };
+
+
+  const handleToast = (name)=>{
+    toast(`${name}`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+  
+      });
+
+  }
+
  
 const addToFavorite = (item)=>{
   addToFavoriteList(item.id)
@@ -30,12 +51,24 @@ const addToFavorite = (item)=>{
 
   return (
     <div className="relative h-[600px] mt-5">
-
+   <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
 <div className="absolute md:w-auto w-full mt-44 left-1/2 transform -translate-x-1/2 bg-slate-50 border-8 border-gray-100 rounded-lg shadow-lg">
         {/* Card */}
         <div className="md:flex p-4">
           <img
-            src={ "https://i.ibb.co.com/Ch83ywK/download.jpg"} // Fallback image if image is not available
+            src={ image} // Fallback image if image is not available
             alt={name}
             className="md:w-1/2 w-full h-48 object-cover rounded-lg md:rounded-l-lg"
             style={{ objectPosition: "top center" }} // Start the image from the top center
@@ -44,11 +77,11 @@ const addToFavorite = (item)=>{
             <h1 className="text-2xl font-semibold">{name}</h1>
             <p className="text-gray-700 mt-2">{description}</p>
             <p className="text-xl font-bold mt-4">${price}</p>
-            <div className="">
+            <div className="grid grid-cols-2">
             <button onClick={()=>addToCart(productData)} className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 ease-in-out shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
               Add To Cart
             </button>
-            <button onClick={()=>addToFavorite(productData)}>Love</button>
+            <button onClick={()=>addToFavorite(productData)} ><MdOutlineFavoriteBorder /></button>
             </div>
           </div>
         </div>

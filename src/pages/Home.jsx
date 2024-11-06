@@ -5,6 +5,8 @@ import ProductCart from "../components/ProductCart";
 import { getStoreRedList } from "../utils/addToDb";
 
 function Home() {
+
+  document.title = "Home"
   const categoriesData = useLoaderData();
   const navigate = useNavigate();
 

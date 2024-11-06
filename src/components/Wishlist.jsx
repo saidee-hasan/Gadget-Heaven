@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getFavoriteList, removeFavoriteList } from "../utils/addToDb";
+import Delete from "../assets/delete_12319540.png"
 
 function Wishlist() {
   const data = useLoaderData();
@@ -24,6 +25,7 @@ function Wishlist() {
   console.log(cart)
   return (
     <div className="container mx-auto">
+      <h1 className="text-4xl font-bold">Wishlist </h1>
    <div className="space-y-6 mt-4">
         {cart.length === 0 ? (
           <p className="text-center text-gray-500 ">Your cart is empty.</p>
@@ -39,13 +41,14 @@ function Wishlist() {
                 <h1 className="text-xl font-semibold">{item.name}</h1>
                 <p className="text-gray-600">{item.description}</p>
                 <p className="text-lg font-bold text-green-600">${item.price.toFixed(2)}</p>
-                <button 
-                  onClick={() => handleRemove(item.id)} 
-                  className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors duration-300"
-                >
-                  Remove
-                </button>
+              
               </div>
+              <button 
+                  onClick={() => handleRemove(item.id)} 
+                  className="mt-2  text-white px-4 py-2 rounded   transition-colors duration-300"
+                >
+               <img className="w-8" src={Delete} alt="" />
+                </button>
             </div>
           ))
         )}

@@ -7,7 +7,7 @@ import Wishlist from '../components/Wishlist';
 
 function Dashboard() {
 
-     
+     document.title="Dashboard"
  const [isActive, setIsActive] = useState({
   cart: true,
 
