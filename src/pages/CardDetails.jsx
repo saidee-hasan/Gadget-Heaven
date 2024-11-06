@@ -19,15 +19,14 @@ function CardDetails() {
 
 
   const addToCart = (item) => {
-
- addToStoreRedList(item.id)
+    addToStoreRedList(item.id)
 
   };
  
 
 
   return (
-    <div className="relative h-[600px]">
+    <div className="relative h-[600px] mt-5">
 
 <div className="absolute md:w-auto w-full mt-44 left-1/2 transform -translate-x-1/2 bg-slate-50 border-8 border-gray-100 rounded-lg shadow-lg">
         {/* Card */}

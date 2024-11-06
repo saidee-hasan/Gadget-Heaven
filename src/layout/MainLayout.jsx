@@ -5,10 +5,12 @@ import { Outlet } from 'react-router-dom'
 
 export default function MainLayout() {
   return (
-    <div className='container mx-auto '>
+    <div className=' '>
       <Navbar/>
-     
-      <div className="min-h-[calc(100vh-152px)]"><Outlet/></div>
+   <br />
+   <br />
+   
+      <div className="min-h-[calc(100vh-152px)] "><Outlet/></div>
        <Footer/>
     </div>
   )

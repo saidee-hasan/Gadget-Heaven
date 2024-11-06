@@ -1,4 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
+import { getStoreRedList } from "../utils/addToDb";
+import { CiShoppingCart } from "react-icons/ci";
+import { MdFavoriteBorder } from "react-icons/md";
 
 
 function Navbar() {
@@ -17,18 +20,20 @@ function Navbar() {
 
       case '/dashboard':
 
-        return 'bg-red-200';
+        return 'bg-white';
 
 
       default:
 
-        return 'bg-green-200';
+        return 'bg-white';
 
     }
-
+   
   };
+  const cartLength = getStoreRedList()
+  
   return (
-    <div className={`${getBackgroundColor()} shadow-md`}>
+    <div className={`${getBackgroundColor()} shadow-md fixed mt-0 w-full z-50`}>
       <div className="container mx-auto px-4">
         <div className="navbar">
           <div className="navbar-start">
@@ -62,25 +67,36 @@ function Navbar() {
                 <li>
                   <Link to="/dashboard" className="hover:bg-green-200">Dashboard</Link>
                 </li>
+                <li>
+                  <Link to="/about" className="hover:bg-green-200">About</Link>
+                </li>
               </ul>
             </div>
-            <Link to="/" className="btn btn-ghost text-xl text-white">Gadget Heaven</Link>
+            <Link to="/" className="btn btn-ghost text-xl text-black">Gadget Heaven</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
                 <Link to="/" className="hover:bg-green-200 rounded px-3 py-2">Home</Link>
               </li>
+             
               <li>
-                <a className="hover:bg-green-200 rounded px-3 py-2">Statistics</a>
+              <Link className="hover:bg-green-200 rounded px-3 py-2" to={'/statistics'}>Statistics</Link>
+   
               </li>
               <li>
                 <Link to="/dashboard" className="hover:bg-green-200 rounded px-3 py-2">Dashboard</Link>
               </li>
+              <li>
+                  <Link to="/about" className="hover:bg-green-200">About</Link>
+                </li>
             </ul>
           </div>
-          <div className="navbar-end">
-            <a className="btn bg-white text-green-500 hover:bg-green-200">Button</a>
+          <div className="navbar-end flex gap-3">
+          <p style={{ fontSize: '24px' }}> <CiShoppingCart /></p>
+
+<p style={{ fontSize: '24px' }}><MdFavoriteBorder /></p>
+        
           </div>
         </div>
       </div>

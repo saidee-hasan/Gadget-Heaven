@@ -1,6 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { clearStoreRedList, getStoreRedList, removeFromStoreRedList } from '../utils/addToDb';
 
-function Cart({ cart, handleRemove }) {
+function Cart() {
+
+
+ const data = useLoaderData();
+ const [cart,setCart]=useState([])
+ useEffect(()=>{
+const storedReadList = getStoreRedList();
+const storedReadListInt = storedReadList.map(id => parseInt(id));
+const addToCart = data.filter(cart=> storedReadListInt.includes(cart.id));
+setCart(addToCart)
+
+
+
+ },[])
+
+ const handleRemove =(id)=>{
+  const remCart = cart.filter(bottle=> bottle.id !== id)
+ setCart(remCart)
+  removeFromStoreRedList(id)
+
+}
+const handleClear = () => {
+  clearStoreRedList();
+  setCart([]); // Clear the state as well
+};
+
+
+
+
+
+
   // State to manage sorting order
   const [sortOrder, setSortOrder] = useState('asc');
 
@@ -18,22 +50,29 @@ function Cart({ cart, handleRemove }) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-5">
-      <h2 className="text-2xl font-bold mb-4">Your Shopping Cart</h2>
+
+    <div className='container mx-auto'>
+        <h2 className="text-2xl font-bold mb-4">Your Shopping Cart</h2>
       
-      {cart.length > 0 && (
-        <div className="mt-6 p-4 bg-gray-100 rounded-lg flex grid grid-cols-2 ">
-            <div className="flex">      <h3 className="text-lg font-bold">Total Price:</h3>
-            <p className="text-xl font-semibold text-green-600">${totalPrice.toFixed(2)}</p></div>
-    
-          <button 
-            onClick={toggleSortOrder} 
-            className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
-          >
-            Sort by Price: {sortOrder === 'asc' ? 'Ascending' : 'Descending'}
-          </button>
+   
+      <div className="mt-6 p-4 bg-gray-100 rounded-lg  grid grid-cols-2 justify-between ">
+          <div className="flex">      <h3 className="text-lg font-bold">Total Price:</h3>
+          <p className="text-xl font-semibold text-green-600">${totalPrice.toFixed(2)}</p></div>
+  <div className="flex justify-end items-end gap-5 ">
+        <button 
+          onClick={toggleSortOrder} 
+          className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
+        >
+          Sort by Price: {sortOrder === 'asc' ? 'Ascending' : 'Descending'}
+        </button>
+
+        <button onClick={()=>handleClear()}  className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
+      >Purcess</button>
         </div>
-      )}
+      </div>
+    <div className="max-w-4xl mx-auto p-5">
+  
+  
 
       <div className="space-y-6 mt-4">
         {cart.length === 0 ? (
@@ -61,6 +100,7 @@ function Cart({ cart, handleRemove }) {
           ))
         )}
       </div>
+    </div>
     </div>
   );
 }
