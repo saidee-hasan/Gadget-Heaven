@@ -95,7 +95,7 @@ const handleClear = () => {
 
       onClick={() => handleRemove(item.id)} 
 
-      className="mt-2 flex items-center justify-center bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
+      className="mt-2 flex items-center justify-center  text-white px-4 py-2 rounded-lg transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
 
       aria-label={`Remove ${item.name}`} // Accessibility improvement
 

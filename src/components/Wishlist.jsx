@@ -25,10 +25,9 @@ function Wishlist() {
   console.log(cart)
   return (
     <div className="container mx-auto">
-      <h1 className="text-4xl font-bold">Wishlist </h1>
-   <div className="space-y-6 mt-4">
+     <div className="space-y-6 mt-4">
         {cart.length === 0 ? (
-          <p className="text-center text-gray-500 ">Your cart is empty.</p>
+          <p className="text-center text-gray-500">Your cart is empty.</p>
         ) : (
           cart.map((item, idx) => (
             <div key={idx} className="grid md:flex bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-shadow duration-300">
@@ -44,16 +43,24 @@ function Wishlist() {
               
               </div>
               <button 
-                  onClick={() => handleRemove(item.id)} 
-                  className="mt-2  text-white px-4 py-2 rounded   transition-colors duration-300"
-                >
-               <img className="w-8" src={Delete} alt="" />
-                </button>
+
+      onClick={() => handleRemove(item.id)} 
+
+      className="mt-2 flex items-center justify-end text-white px-4 py-2 rounded-lg transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
+
+      aria-label={`Remove ${item.name}`} // Accessibility improvement
+
+    >
+
+      <img className="w-6 h-6" src={Delete} alt="Delete" /> {/* Adjusted size for better alignment */}
+
+    </button>
             </div>
           ))
         )}
       </div>
     </div>
+   
    
   )
 }
