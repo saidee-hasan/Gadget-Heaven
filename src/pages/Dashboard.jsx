@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { getStoreRedList } from '../utils/addToDb';
+import { getStoreRedList, removeFromStoreRedList } from '../utils/addToDb';
 import DashboardContainer from '../components/DashboardContainer';
 import Cart from '../components/Cart';
 import Wishlist from '../components/Wishlist';
@@ -18,7 +18,12 @@ setCart(addToCart)
 
  },[])
 
+ const handleRemove =(id)=>{
+  const remCart = cart.filter(bottle=> bottle.id !== id)
+ setCart(remCart)
+  removeFromStoreRedList(id)
 
+}
 
      
  const [isActive, setIsActive] = useState({
@@ -41,7 +46,7 @@ const handleIsActive = (status) => {
    <DashboardContainer handleIsActive={handleIsActive} isActive={isActive}/>
 
    {isActive.cart ? (
-        <Cart cart={cart}  />
+        <Cart cart={cart} handleRemove={handleRemove}  />
       ) : (
         <Wishlist/>
       )}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Cart({ cart, onRemove }) {
+function Cart({ cart, handleRemove }) {
   // State to manage sorting order
   const [sortOrder, setSortOrder] = useState('asc');
 
@@ -22,7 +22,7 @@ function Cart({ cart, onRemove }) {
       <h2 className="text-2xl font-bold mb-4">Your Shopping Cart</h2>
       
       {cart.length > 0 && (
-        <div className="mt-6 p-4 bg-gray-100 rounded-lg grid grid-cols-2 ">
+        <div className="mt-6 p-4 bg-gray-100 rounded-lg flex grid grid-cols-2 ">
             <div className="flex">      <h3 className="text-lg font-bold">Total Price:</h3>
             <p className="text-xl font-semibold text-green-600">${totalPrice.toFixed(2)}</p></div>
     
@@ -51,7 +51,7 @@ function Cart({ cart, onRemove }) {
                 <p className="text-gray-600">{item.description}</p>
                 <p className="text-lg font-bold text-green-600">${item.price.toFixed(2)}</p>
                 <button 
-                  onClick={() => onRemove(item.id)} 
+                  onClick={() => handleRemove(item.id)} 
                   className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors duration-300"
                 >
                   Remove
