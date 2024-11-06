@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoreRedList } from "../utils/addToDb";
+import { addToFavoriteList, addToStoreRedList } from "../utils/addToDb";
 
 
 function CardDetails() {
@@ -23,7 +23,10 @@ function CardDetails() {
 
   };
  
+const addToFavorite = (item)=>{
+  addToFavoriteList(item.id)
 
+}
 
   return (
     <div className="relative h-[600px] mt-5">
@@ -41,9 +44,12 @@ function CardDetails() {
             <h1 className="text-2xl font-semibold">{name}</h1>
             <p className="text-gray-700 mt-2">{description}</p>
             <p className="text-xl font-bold mt-4">${price}</p>
+            <div className="">
             <button onClick={()=>addToCart(productData)} className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 ease-in-out shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
               Add To Cart
             </button>
+            <button onClick={()=>addToFavorite(productData)}>Love</button>
+            </div>
           </div>
         </div>
       </div>

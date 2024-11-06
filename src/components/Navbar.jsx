@@ -16,7 +16,7 @@ function Navbar() {
 
       case '/':
 
-        return 'bg-green-200  rounded-t-2xl';
+        return 'bg-purple-200  ';
 
       case '/dashboard':
 

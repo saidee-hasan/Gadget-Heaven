@@ -9,7 +9,7 @@ function Banner() {
         alt="Banner"
       />
 
-      <div className="relative bg-green-200 rounded-b-2xl  border-gray-500 h-[450px] space-y-2 text-center p-8 flex flex-col items-center">
+      <div className="relative bg-purple-200 rounded-b-2xl  border-gray-500 h-[450px] space-y-2 text-center p-8 flex flex-col items-center">
         <h1 className="md:text-4xl ">
           Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories
         </h1>
