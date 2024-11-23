@@ -16,7 +16,7 @@ function Navbar() {
 
       case '/':
 
-        return 'bg-purple-200  ';
+        return ' bg-purple-400 text-white ';
 
       case '/dashboard':
 
@@ -56,13 +56,13 @@ function Navbar() {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-56 shadow-lg"
+                className="menu menu-sm dropdown-content text-black bg-white rounded-box z-[1] mt-3 w-56 shadow-lg"
               >
                 <li>
                   <Link to="/" className="hover:bg-green-200">Home</Link>
                 </li>
                 <li>
-                  <a className="hover:bg-green-200">Statistics</a>
+                <Link className="hover:bg-green-200 rounded px-3 py-2" to={'/statistics'}>Statistics</Link>
                 </li>
                 <li>
                   <Link to="/dashboard" className="hover:bg-green-200">Dashboard</Link>
@@ -72,7 +72,7 @@ function Navbar() {
                 </li>
               </ul>
             </div>
-            <Link to="/" className="btn btn-ghost text-xl text-black">Gadget Heaven</Link>
+            <Link to="/" className="btn btn-ghost text-xl ">Gadget Heaven</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">

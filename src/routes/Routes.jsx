@@ -6,12 +6,13 @@ import ProductCart from "../components/ProductCart";
 import CardDetails from "../pages/CardDetails";
 import Statistics from "../components/Statistics";
 import About from "../components/About";
+import NotFound from "../components/NotFound";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    errorElement: <div>Error</div>,
+    errorElement: <NotFound/>,
     children: [
       {
         path: "/",
@@ -25,6 +26,7 @@ const routes = createBrowserRouter([
             path: "/", // This is the correct way to define the child route
             element: <ProductCart />,
             loader:()=> fetch("../data.json")
+            
           },
           {
             path: "/category/:category", // This is the correct way to define the child route
@@ -38,11 +40,14 @@ const routes = createBrowserRouter([
         element: <Dashboard />,
         loader:()=> fetch("../data.json")
       },
+      
       {
         path: "/card/:id",
         element: <CardDetails />,
         loader:()=> fetch("../data.json")
       },
+
+
       {
         path: "/statistics",
         element: <Statistics/>,

@@ -21,9 +21,7 @@ function ProductCart() {
 
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-2xl font-bold text-center my-6">
-        Products in Category: <span className="text-blue-600">{category}</span>
-      </h1>
+    
       {products.length === 0 ? (
         <div className="text-center my-6">
           <p className="text-lg text-red-600">No products found in this category.</p>

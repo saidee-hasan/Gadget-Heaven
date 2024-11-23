@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Card({ product }) {
   const { name, price, description, image } = product || {};
@@ -13,10 +13,10 @@ export default function Card({ product }) {
     handleCart(); // Call handleCart to perform its logic
     navigate(`/card/${name}`); // Navigate to the homepage
   };
-
+ 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto bg-white m-4">
-       <img className="w-full h-52 object-cover" src={image} alt={name} />
+       <img className="w-full  h-72 object-cover" src={image} alt={name} />
   
       <div className="px-6 py-4">
         <h1 className="font-bold text-xl mb-2">{name}</h1>

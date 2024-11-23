@@ -4,13 +4,13 @@ function Banner() {
     <div className="relative">
       {/* Banner Image */}
       <img
-        className="absolute z-10 top-1/2 font-bold left-1/2 md:mt-56 mt-64 transform border-8 -translate-x-1/2 -translate-y-1/2 md:w-9/12    h-96 border-[15px] border-purple-200"
+        className="absolute z-10 top-1/2 font-bold left-1/2 md:mt-56 mt-64 transform border-8 -translate-x-1/2 -translate-y-1/2 md:w-9/12 rounded-md   h-96 border-[15px] border-violet-200"
         src={BgBanner}
         alt="Banner"
       />
 
-      <div className="relative bg-purple-200 rounded-b-2xl  border-gray-500 h-[450px] space-y-2 text-center p-8 flex flex-col items-center">
-        <h1 className="md:text-4xl ">
+      <div className="relative bg-purple-400 text-white rounded-b-2xl  border-gray-500 h-[450px] space-y-2 text-center  md:p-8 flex flex-col p-2 items-center">
+        <h1 className="md:text-4xl text-2xl ">
           Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories
         </h1>
         <p>

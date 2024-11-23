@@ -7,7 +7,7 @@ import Wishlist from '../components/Wishlist';
 
 function Dashboard() {
 
-     document.title="Dashboard"
+     document.title="  Dashboard | Gadget Heaven"
  const [isActive, setIsActive] = useState({
   cart: true,
 

@@ -24,7 +24,7 @@ function Wishlist() {
   }
   console.log(cart)
   return (
-    <div className="container mx-auto">
+    <div className=" lg:w-5/12 md:w-10/12 mx-auto p-2">
      <div className="space-y-6 mt-4">
         {cart.length === 0 ? (
           <p className="text-center text-gray-500">Your cart is empty.</p>
@@ -46,7 +46,7 @@ function Wishlist() {
 
       onClick={() => handleRemove(item.id)} 
 
-      className="mt-2 flex items-center justify-end text-white px-4 py-2 rounded-lg transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
+      className="mt-2 flex items-center justify-end mx-auto text-white px-4 py-2 transition-colors duration-300  focus:outline-none focus:ring-2 focus:ring-opacity-75"
 
       aria-label={`Remove ${item.name}`} // Accessibility improvement
 

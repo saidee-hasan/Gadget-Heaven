@@ -6,7 +6,7 @@ import { getStoreRedList } from "../utils/addToDb";
 
 function Home() {
 
-  document.title = "Home"
+  document.title = "Home | Gadget Heaven"
   const categoriesData = useLoaderData();
   const navigate = useNavigate();
 
