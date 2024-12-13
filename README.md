@@ -27,5 +27,5 @@ Gadget Heaven is an online platform that showcases the latest gadgets and techno
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Gadget-Heaven.git
+   git clone https://github.com/saidee-hasan/Gadget-Heaven.git
    cd Gadget-Heaven
